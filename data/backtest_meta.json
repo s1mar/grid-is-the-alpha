@@ -1,0 +1,172 @@
+{
+  "n_events": 2978,
+  "n_price_ok": 2976,
+  "compliance": {
+    "qwen2.5:7b-instruct|P1": 1.0,
+    "qwen2.5:7b-instruct|P2": 0.9998,
+    "qwen2.5:7b-instruct|P3": 0.9998,
+    "mistral:7b-instruct-v0.2-q4_0|P1": 0.0,
+    "mistral:7b-instruct-v0.2-q4_0|P2": 0.0,
+    "mistral:7b-instruct-v0.2-q4_0|P3": 0.7401,
+    "phi3:mini|P1": 0.0015,
+    "phi3:mini|P2": 0.9211,
+    "phi3:mini|P3": 0.0435
+  },
+  "cost_sweep": {
+    "0bp": {
+      "min": -3.1036986602155636,
+      "median": 0.0,
+      "max": 3.811952757169637,
+      "sd": 0.9613859407037845,
+      "frac_above_1": 0.20357510288065844
+    },
+    "5bp": {
+      "min": -3.8503713718667476,
+      "median": -0.24085270689190444,
+      "max": 2.460360913479525,
+      "sd": 1.0121597838591612,
+      "frac_above_1": 0.09182098765432099
+    },
+    "10bp": {
+      "min": -5.619665069445889,
+      "median": -0.8420275098405903,
+      "max": 2.0421007992541296,
+      "sd": 1.238222353677997,
+      "frac_above_1": 0.04063786008230453
+    },
+    "25bp": {
+      "min": -12.013960528322507,
+      "median": -2.3625074407030775,
+      "max": 1.5824309683083497,
+      "sd": 2.3352026801162533,
+      "frac_above_1": 0.006172839506172839
+    }
+  },
+  "frac_events_permutable": 0.9993284083277367,
+  "num_predict": 64,
+  "median_events_per_session": 11.0,
+  "n_sessions": 250,
+  "first_session": "2025-08-01",
+  "last_session": "2026-07-30",
+  "n_panel_sessions": 313,
+  "n_configs": 7776,
+  "reps": 1000,
+  "cost_bps_per_side": 5.0,
+  "llm_keys": [
+    [
+      "qwen2.5:7b-instruct",
+      "P1",
+      1200
+    ],
+    [
+      "qwen2.5:7b-instruct",
+      "P1",
+      4000
+    ],
+    [
+      "qwen2.5:7b-instruct",
+      "P2",
+      1200
+    ],
+    [
+      "qwen2.5:7b-instruct",
+      "P2",
+      4000
+    ],
+    [
+      "qwen2.5:7b-instruct",
+      "P3",
+      1200
+    ],
+    [
+      "qwen2.5:7b-instruct",
+      "P3",
+      4000
+    ],
+    [
+      "mistral:7b-instruct-v0.2-q4_0",
+      "P1",
+      1200
+    ],
+    [
+      "mistral:7b-instruct-v0.2-q4_0",
+      "P1",
+      4000
+    ],
+    [
+      "mistral:7b-instruct-v0.2-q4_0",
+      "P2",
+      1200
+    ],
+    [
+      "mistral:7b-instruct-v0.2-q4_0",
+      "P2",
+      4000
+    ],
+    [
+      "mistral:7b-instruct-v0.2-q4_0",
+      "P3",
+      1200
+    ],
+    [
+      "mistral:7b-instruct-v0.2-q4_0",
+      "P3",
+      4000
+    ],
+    [
+      "phi3:mini",
+      "P1",
+      1200
+    ],
+    [
+      "phi3:mini",
+      "P1",
+      4000
+    ],
+    [
+      "phi3:mini",
+      "P2",
+      1200
+    ],
+    [
+      "phi3:mini",
+      "P2",
+      4000
+    ],
+    [
+      "phi3:mini",
+      "P3",
+      1200
+    ],
+    [
+      "phi3:mini",
+      "P3",
+      4000
+    ]
+  ],
+  "score_meta": {
+    "score_lines": 54000,
+    "score_used": 53604
+  },
+  "coverage_per_llm_config": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "runtime_sec": 772.1
+}

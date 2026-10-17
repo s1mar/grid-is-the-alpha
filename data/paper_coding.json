@@ -1,0 +1,123 @@
+{
+  "_procedure": "Convenience sample of recent LLM-driven trading pipelines for which a machine-readable full text (arXiv HTML) could be retrieved on 2026-07-31. Each paper was queried for five items; an item is coded 'yes' only when a verbatim sentence stating it was located, otherwise 'no'. Single coder, keyword-guided retrieval over the HTML full text. This is illustrative of reporting practice, not a systematic review, and it is described that way in the paper.",
+  "_items": {
+    "prompt_text": "the exact prompt text appears in the paper",
+    "holding": "the holding period or rebalancing frequency is stated",
+    "entry_timing": "the timing of trade entry relative to information arrival is stated",
+    "pipeline_sensitivity": "a sensitivity or robustness analysis over pipeline implementation choices (prompt variants, thresholds, holding period, weighting, parsing) is reported",
+    "costs": "transaction costs are modelled, with the level stated"
+  },
+  "papers": [
+    {
+      "key": "lopezlira2023chatgpt",
+      "short": "Lopez-Lira and Tang",
+      "arxiv": "2304.07619",
+      "prompt_text": "yes",
+      "holding": "yes",
+      "entry_timing": "yes",
+      "pipeline_sensitivity": "no",
+      "costs": "yes",
+      "evidence": {
+        "prompt_text": "Forget all your previous instructions. Pretend you are a financial expert...",
+        "holding": "All the strategies are rebalanced daily.",
+        "entry_timing": "For headlines before 6 am on the opening day, we assume the headlines can be traded by the market opening of the same day and sold at the close of the same day...",
+        "costs": "Cumulative Returns of Investing $1 in the Long-Short Strategy for Different Transaction Costs (0, 5, 10, 25 bp)"
+      }
+    },
+    {
+      "key": "yu2023finmem",
+      "short": "FinMem",
+      "arxiv": "2311.13743",
+      "prompt_text": "unretrieved",
+      "holding": "unretrieved",
+      "entry_timing": "unretrieved",
+      "pipeline_sensitivity": "unretrieved",
+      "costs": "unretrieved",
+      "evidence": {"_note": "no machine-readable HTML full text available; excluded from the coded sample"}
+    },
+    {
+      "key": "zhang2024finagent",
+      "short": "FinAgent",
+      "arxiv": "2402.18485",
+      "prompt_text": "no",
+      "holding": "no",
+      "entry_timing": "no",
+      "pipeline_sensitivity": "component",
+      "costs": "no",
+      "evidence": {
+        "pipeline_sensitivity": "we compare the performance of FinAgent with or without diversified retrieval (component ablation, Table 5)",
+        "costs": "reward ... with consideration of commission fee, level not stated"
+      }
+    },
+    {
+      "key": "yu2024fincon",
+      "short": "FinCon",
+      "arxiv": "2407.06567",
+      "prompt_text": "no",
+      "holding": "yes",
+      "entry_timing": "no",
+      "pipeline_sensitivity": "component",
+      "costs": "no",
+      "evidence": {
+        "holding": "portfolio weights are rebalanced on daily basis",
+        "pipeline_sensitivity": "ablation of within-episode CVaR risk control and over-episode belief update"
+      }
+    },
+    {
+      "key": "xiao2024tradingagents",
+      "short": "TradingAgents",
+      "arxiv": "2412.20138",
+      "prompt_text": "no",
+      "holding": "no",
+      "entry_timing": "no",
+      "pipeline_sensitivity": "no",
+      "costs": "no",
+      "evidence": {
+        "holding": "Agents make decisions based solely on data available up to each trading day (no holding rule stated)",
+        "entry_timing": "trading signals ... are then executed (no timing stated)"
+      }
+    },
+    {
+      "key": "li2025finsaber",
+      "short": "FINSABER",
+      "arxiv": "2505.07078",
+      "prompt_text": "no",
+      "holding": "no",
+      "entry_timing": "no",
+      "pipeline_sensitivity": "no",
+      "costs": "yes",
+      "evidence": {
+        "costs": "Moomoo's standard US commission fee ($0.0049/share, minimum $0.99/order)"
+      }
+    },
+    {
+      "key": "papadakis2025atlas",
+      "short": "ATLAS",
+      "arxiv": "2510.15949",
+      "prompt_text": "no",
+      "holding": "yes",
+      "entry_timing": "no",
+      "pipeline_sensitivity": "no",
+      "costs": "no",
+      "evidence": {
+        "holding": "daily decision interval: the agent acts once per trading day",
+        "costs": "we abstract away four aspects of market microstructure, namely latency, slippage, market impact, and intraday partial fills"
+      }
+    },
+    {
+      "key": "huang2026hypotheses",
+      "short": "Huang et al.",
+      "arxiv": "2604.26747",
+      "prompt_text": "no",
+      "holding": "yes",
+      "entry_timing": "yes",
+      "pipeline_sensitivity": "no",
+      "costs": "yes",
+      "evidence": {
+        "holding": "With a one-day execution lag and one-day holding period",
+        "entry_timing": "The lag ensures that a signal formed at date t is not evaluated using an unrealistic same-close execution assumption.",
+        "costs": "A 5 basis point one-way trading cost"
+      }
+    }
+  ]
+}

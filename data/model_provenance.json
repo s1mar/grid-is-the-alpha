@@ -1,0 +1,36 @@
+{
+  "mistral:7b-instruct-v0.2-q4_0": {
+    "digest": "61e88e884507ba5e",
+    "params": "7B",
+    "quant": "Q4_0",
+    "release": "2023-12"
+  },
+  "nvidia/nemotron-3-ultra-550b-a55b:free": {
+    "note": "Inside the sample window 2025-08-01..2026-07-30, so this arm does NOT inherit the release-date bound the pre-registered grid enjoys. The arm returns a null, and contamination could only push toward finding signal, so the direction is safe.",
+    "params": "550B total, 55B active (MoE hybrid Mamba-Transformer)",
+    "quant": "served by provider, not locally quantised",
+    "release": "2026-06-04",
+    "release_source": "Announced at Computex 2026 on 2026-06-01; released 2026-06-04. Verified by fetch 2026-08-05 (research.nvidia.com/labs/nemotron/Nemotron-3-Ultra/, marktechpost.com 2026-06-04, huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16)."
+  },
+  "phi3:mini": {
+    "digest": "4f222292793889a9",
+    "params": "3.8B",
+    "quant": "Q4_0",
+    "release": "2024-06"
+  },
+  "qwen2.5:7b-instruct": {
+    "digest": "845dbda0ea48ed74",
+    "params": "7.6B",
+    "quant": "Q4_K_M",
+    "release": "2024-09"
+  },
+  "qwen3.6:latest": {
+    "digest": "07d35212591fc277",
+    "params": "36.0B",
+    "quant": "Q4_K_M",
+    "release": "2026-04-16",
+    "release_source": "QwenLM/Qwen3.6 GitHub README, dated news entry verbatim: \"2026-04-16: Qwen3.6-35B-A3B is now availabe on Hugging Face Hub and ModelScope.\" Fetched 2026-08-03.",
+    "library_tag": "qwen3.6:35b-a3b-q4_K_M",
+    "library_tag_source": "ollama.com/library/qwen3.6/tags lists digest 07d35212591f under this tag (read 2026-10-17). The run pulled qwen3.6:latest, which then resolved to this build (digest above); that tag has since been repointed to a different build."
+  }
+}

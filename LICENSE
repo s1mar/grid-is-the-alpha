@@ -1,0 +1,45 @@
+MIT License
+
+Copyright (c) 2026 The Authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+associated documentation files (the "Software"), to deal in the Software without restriction,
+including without limitation the rights to use, copy, modify, merge, publish, distribute,
+sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial
+portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES
+OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+--------------------------------------------------------------------------------
+THIRD-PARTY DATA INCLUDED IN THIS ARTIFACT
+
+data/universe.csv is derived from the Wikipedia article "List of S&P 500 companies", retrieved
+2026-07-31 via the MediaWiki API, and data/sp500_wikipedia_rev1365256480.wikitext.gz is the
+unmodified wikitext of revision 1365256480 of that article (dated 2026-07-21, the live revision
+on the retrieval date; https://en.wikipedia.org/w/index.php?oldid=1365256480). Wikipedia text is
+licensed CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); both files are
+redistributed under the same licence, with attribution to the Wikipedia contributors listed in the
+article history.
+
+data/prices.csv.gz is derived from the Yahoo Finance chart endpoint. It is included for
+reproducibility of the analysis in this paper only; redistribution or commercial use may be
+restricted by Yahoo's terms of service, and users should obtain their own price data for any other
+purpose.
+
+data/scores.jsonl and data/scores_probe.jsonl are outputs of open-weight models run locally. The
+model builds, with content digests and quantisation levels, are recorded in
+data/model_provenance.json. Each model carries its own upstream licence. data/scores_or.jsonl holds
+outputs of nvidia/nemotron-3-ultra-550b-a55b, obtained through OpenRouter's free tier in August
+2026; the model's own licence and OpenRouter's terms apply to them.
+
+Filing text is from SEC EDGAR and is in the public domain. The SEC requires automated access to
+identify itself: set the SEC_CONTACT environment variable to your own email address before running
+code/collect.py. The default placeholder is not a valid contact string and running with it would
+breach the SEC's access policy.

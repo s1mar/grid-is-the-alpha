@@ -1,0 +1,63 @@
+{
+  "_control_holds": true,
+  "mistral:7b-instruct-v0.2-q4_0|P1": {
+    "cap_new": 256,
+    "cap_old": 64,
+    "mean_chars_new": 544.5333333333333,
+    "n": 300,
+    "seconds": 766.6,
+    "strict_new": 0.0,
+    "strict_old": 0.0,
+    "why": "failing: 0.0% strict at cap 64"
+  },
+  "mistral:7b-instruct-v0.2-q4_0|P2": {
+    "cap_new": 256,
+    "cap_old": 64,
+    "mean_chars_new": 421.1,
+    "n": 300,
+    "seconds": 645.0,
+    "strict_new": 0.0,
+    "strict_old": 0.0,
+    "why": "failing: 0.0% strict at cap 64"
+  },
+  "mistral:7b-instruct-v0.2-q4_0|P3": {
+    "cap_new": 256,
+    "cap_old": 64,
+    "mean_chars_new": 101.39666666666666,
+    "n": 300,
+    "seconds": 319.8,
+    "strict_new": 0.7766666666666666,
+    "strict_old": 0.7557251908396947,
+    "why": "CONTROL: 74.8% strict at cap 64, must stay high"
+  },
+  "phi3:mini|P1": {
+    "cap_new": 256,
+    "cap_old": 64,
+    "mean_chars_new": 957.84,
+    "n": 300,
+    "seconds": 943.4,
+    "strict_new": 0.0033333333333333335,
+    "strict_old": 0.007633587786259542,
+    "why": "failing: 0.3% strict at cap 64"
+  },
+  "phi3:mini|P2": {
+    "cap_new": 256,
+    "cap_old": 64,
+    "mean_chars_new": 15.256666666666666,
+    "n": 300,
+    "seconds": 218.8,
+    "strict_new": 0.9633333333333334,
+    "strict_old": 0.9847328244274809,
+    "why": "CONTROL: 95.0% strict at cap 64, must stay high"
+  },
+  "phi3:mini|P3": {
+    "cap_new": 256,
+    "cap_old": 64,
+    "mean_chars_new": 589.9366666666666,
+    "n": 300,
+    "seconds": 707.9,
+    "strict_new": 0.056666666666666664,
+    "strict_old": 0.03816793893129771,
+    "why": "failing: 6.6% strict at cap 64"
+  }
+}
