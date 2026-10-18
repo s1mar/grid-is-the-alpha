@@ -579,6 +579,7 @@ def gate_camera_ready_claims(tex: str) -> None:
         (r"dispersion does not fall either", "dispersion said not to fall, against its own numbers"),
         # External judge, 2026-10-18: the list is the 2026-07-21 revision; say so by its date.
         (r"index membership at the end of the\s+window", "membership dated to the window end"),
+        (r"coded by one author", "implies co-authors in a single-author paper"),
     ]
     for pat, what in retired:
         check(re.search(pat, flat) is None, f"retired camera-ready wording is back ({what}): /{pat}/")

@@ -1173,3 +1173,26 @@ this general-practice bundle; (b) the Threats heading "The grid is ours, and it 
 real one" is the strongest remaining R2 W1 objection; it is part of a rebuttal and unedited, so it is
 the author's call. Also skipped: "any grid" (signed off, accurate), "Under this benchmark" (circular),
 an R1 scope rule (new protocol content).
+
+**D-070 | 2026-10-18 | A compiled-cache leak reached the public repo for about 30 minutes; purged.**
+Running the gate inside the staging repo created `code/__pycache__/*.pyc`, and `git add -A` committed
+them in c334bca. Compiled files embed the absolute path they were built from, so both carried the
+Windows username and the local folder names. The taint scan reported clean because it skipped binary
+files. Fixed: the files were removed and `.gitignore` added (f83a5b7); on the author's instruction
+history was rewritten to `dcc27a8 -> c6085de` (identical final tree 55b36b6) and force-pushed with a
+lease; a fresh public clone has 0 cache objects and 55 files identical by hash. The orphaned commit
+stays reachable by its hash on GitHub until GitHub garbage-collects it (HTTP 200 when checked); only
+GitHub Support can expedite that. Root cause closed: `papertools/repo_taint_scan.py` now checks every
+binary's raw bytes (and a .gz's decompressed bytes) for paths and names and refuses any .pyc; it is the
+pre-push hook, and it was validated both ways (current tree clean; the leaky commit flagged).
+
+**D-071 | 2026-10-18 | External judgment pass 2: verdict unchanged, nothing blocks upload.** Recorded at
+the revision notes; the other session verified fix 1 in the PDF, the upload zip's clean
+rebuild, the repo PDF byte-identical to local, consistency 260/260 and the CMT form text. Added
+residual (c) beside D-069 (a) and (b): the abstract's "differing only in choices papers rarely report"
+overstates for model and holding period (4 of 7 coded papers report holding period); pre-existing,
+reviewed, inside the declined bundle. OPTIONAL, author's call, not applied: Section 2 "coded by one
+author" reads as implying co-authors in a single-author paper; "coded by the author" would fix it at
+zero words. Refuted: "can afford the permutation" is consistent with the protocol's cost split.
+
+**D-072 | 2026-10-18 | author chose the optional D-071 fix: "coded by one author" to "coded by the author".**
