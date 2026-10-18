@@ -577,6 +577,8 @@ def gate_camera_ready_claims(tex: str) -> None:
         (r"Our parser missed one", "conversational wording"),
         # loopB cycle 3: the 550B arm's spread (0.95) is below the reference arm's (0.97).
         (r"dispersion does not fall either", "dispersion said not to fall, against its own numbers"),
+        # External judge, 2026-10-18: the list is the 2026-07-21 revision; say so by its date.
+        (r"index membership at the end of the\s+window", "membership dated to the window end"),
     ]
     for pat, what in retired:
         check(re.search(pat, flat) is None, f"retired camera-ready wording is back ({what}): /{pat}/")

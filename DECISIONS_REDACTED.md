@@ -1141,3 +1141,35 @@ items on the ban list. Gate state: consistency self-test 39 of 39; build 0 error
 open failures are the artifact URL (author creates the repository) and checks that need the final cold
 read and the upload zip. papertools/macrocheck.py now counts macros defined in the sources themselves
 (injection-validated: an undefined macro still fails).
+
+**D-068 | 2026-10-17 | Artifact released at github.com/s1mar/grid-is-the-alpha; URL in the paper.**
+the author asked me to create the repository. Created private, pushed one commit (dcc27a8, author and
+committer dated 2026-10-17, the identity used on the author's other artifact repos), verified
+the served copy (same commit hash; 54 of 54 files identical by sha256 on a clone without CRLF
+conversion), then made it public (HTTP 200 unauthenticated). Before the push: a taint scan of the
+extracted package found process traces that no earlier gate read; fixed by excluding three authoring
+tools (packer, ledger redactor, form generator), renaming the spend-guard import in the two hosted-arm
+scripts to a neutral `spend_guard` (a workspace shim re-exports the real guard, so the author's own runs
+stay guarded and logged), dropping wall-clock times, and extending the redaction rules; the scan is
+installed as the pre-push hook and was shown to block a planted trace. Clean-room test: every README
+command runs as printed; `harness_audit.py` reproduces the headline figures; re-running `analyze.py`
+from the shipped data reproduces numbers.json (111 keys), numbers.tex and verify_output.txt byte for
+byte. score_or.py now re-scores with the user's own key on free endpoints only, which makes the
+paper's "needs a free-tier key" true. Upload pack: `upload/icaif26-944-sources.zip` (comment-stripped
+sources, bbl, class, three generated inputs, the figure), rebuilt from the zip in an empty directory:
+9 pages, 0 errors, text identical to the master PDF. the pre-upload check: all checks pass except the cold read,
+re-run on the final text.
+
+**D-069 | 2026-10-18 | External judgment of the camera-ready: SUCCESS WITH SMALL FIXES; one edit.**
+An independent session judged the camera-ready against both reviews with two blind judges that never
+saw the declines (the revision notes and `.json`), and separately re-verified
+all 27 new or changed facts from primary sources (the revision notes, 27 of 27
+confirmed). Told the author's constraints, it settled its six fixes as: APPLY fix 1 only (Threats
+"index membership at the end of the window" to "as of \MemRevisionDate"; true either way, since no
+index change is listed between 2026-07-21 and 2026-07-30, but the date is self-evidencing); SKIP the
+rest. KNOWN RESIDUALS, logged so the next round does not re-find them: (a) page 1 "most of them are
+never described" sits beside the abstract's softened "rarely reported" (R2 W1); the author declined
+this general-practice bundle; (b) the Threats heading "The grid is ours, and it is smaller than the
+real one" is the strongest remaining R2 W1 objection; it is part of a rebuttal and unedited, so it is
+the author's call. Also skipped: "any grid" (signed off, accurate), "Under this benchmark" (circular),
+an R1 scope rule (new protocol content).
